@@ -33,4 +33,4 @@ ENV npm_config_loglevel warn
 # allow installing when the main user is root
 ENV npm_config_unsafe_perm true
 
-RUN npm install -g cypress@3.1.5
+RUN npm install -g cypress@3.2.0
