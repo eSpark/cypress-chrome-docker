@@ -11,5 +11,5 @@ Usage
 
 Pull it down like this:
 
-     docker pull gnarmis/cypress-chrome-docker:latest
+     docker pull espark/cypress-chrome-docker:cypress3.1.5
 
