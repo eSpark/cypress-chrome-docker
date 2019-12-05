@@ -6,7 +6,7 @@ Docker image based on https://github.com/cypress-io/cypress-docker-images/blob/m
 
 It's Debian based with node v8 and latest stable Google Chrome, with some other additions.
 
-This one installs cypress 3.1.5 globally
+This one installs cypress 3.1.5 globally.
 
 Usage
 =====
