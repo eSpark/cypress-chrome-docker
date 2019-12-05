@@ -1,4 +1,4 @@
-FROM cypress/included:3.7.0
+FROM cypress/included:3.2.0
 
 USER root
 
