@@ -1,4 +1,4 @@
-FROM cypress/base:10
+FROM cypress/base:14
 
 USER root
 
@@ -8,14 +8,14 @@ RUN echo "force new chrome here"
 # install Chromebrowser
 RUN \
   wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
-  dpkg -i google-chrome-stable_current_amd64.deb; apt-get -fy install
+  apt-get update -y && \
+  apt-get -fy install xdg-utils fonts-liberation zip && \
+  dpkg -i google-chrome-stable_current_amd64.deb && \
+  apt-get -fy install
 
 # "fake" dbus address to prevent errors
 # https://github.com/SeleniumHQ/docker-selenium/issues/87
 ENV DBUS_SESSION_BUS_ADDRESS=/dev/null
-
-# Add zip utility - it comes in very handy
-RUN apt-get update && apt-get install -y zip
 
 # versions of local tools
 RUN node -v
