@@ -1,4 +1,4 @@
-FROM cypress/base:16.14.0
+FROM cypress/base:20.11.1
 
 USER root
 
@@ -9,7 +9,7 @@ RUN echo "force new chrome here"
 RUN \
   wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
   apt-get update && \
-  apt-get -fy install fonts-liberation xdg-utils && \
+  apt-get -fy install fonts-liberation xdg-utils libu2f-udev && \
   dpkg -i google-chrome-stable_current_amd64.deb
 
 # "fake" dbus address to prevent errors
